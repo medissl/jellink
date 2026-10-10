@@ -26,7 +26,7 @@ Current release: **0.8.0**, signed native Android. Your existing local progress 
 
 ### A little company
 
-Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Play as a guest, or link an email to keep your online profile across devices. Add friends with their code, accept or reject requests, and compare server-verified Versus scores in your friend leaderboard. Solo remains separate.
+Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Guest play needs no email. Your guest profile stays on this device. Add friends with their code, accept or reject requests, and compare server-verified Versus scores in your friend leaderboard. Solo remains separate.
 
 There are 38 achievements with unlock dates, optional gentle haptics, and a result card you can share after losing. No ads. No currency shop.
 
@@ -37,6 +37,39 @@ There are 38 achievements with unlock dates, optional gentle haptics, and a resu
 3. Open Jellink. For updates, install the new APK over the existing app; do not uninstall first if you want to keep progress.
 
 Each release includes a SHA-256 checksum. The app is native Android with native physics, drawing and audio; it does not use a WebView.
+
+## Built by Medissl
+
+**[Visit the Jellink website](https://jellink.vercel.app)** · **[Play the browser game](https://jellink.vercel.app/play/)** · [More projects](https://github.com/medissl)
+
+Jellink is an original game and a portfolio project: gameplay design, a custom physics simulation, procedural jelly rendering, original audio, a native Android app, and its download website. The project grew through hands-on playtesting and iteration on controls, physics, difficulty and feedback.
+
+### Tech stack
+
+| Part | Built with |
+| --- | --- |
+| Browser game | JavaScript, HTML, CSS and Canvas 2D; Vite |
+| Native Android | Java, Android Canvas, SoundPool / MediaPlayer; Gradle, Java 21, Android SDK 36 |
+| Physics and visuals | Custom 2D collision and pressure-based jelly deformation; shared gameplay rules in browser and Android |
+| Local progress | Browser local storage; Android SharedPreferences; no account needed for solo |
+| Optional online play | Supabase Auth, Postgres and an authenticated Edge Function using the game engine |
+| Website hosting | Vercel, connected to the private source repository |
+| Releases and testing | GitHub Actions, native unit tests and Android emulator checks; signed APKs with SHA-256 checksums |
+| Typography | Fredoka, licensed under SIL OFL |
+
+### How it works
+
+Jelly bodies react to gravity, impacts, neighbouring weight and curved glass boundaries. Their rendered surfaces deform with contact pressure while the collision solver maintains a stable pile. Three sizes and three rounded shapes change how pieces settle. Matching crowds grow through ten Bloom milestones, and larger pops can trigger sequential chain reactions.
+
+Solo keeps its progress on the device. Online matches use server-verified moves and scores, with local prediction for immediate feedback. Versus uses the same seeded ordinary jelly sequence in both jars; Co-op uses one shared jar with alternating drops. Online matches restore the solo jar when you leave and do not overwrite local records.
+
+The APK draws and plays the game natively. It does not package a browser or use a WebView. Its compact size comes from native drawing, compact artwork and bundled audio.
+
+### Documentation
+
+- [Game guide](docs/game-guide.md): controls, crowds, Fever and rescue drops.
+- [Project overview](docs/project-overview.md): architecture, development decisions and verification.
+- [Release notes and official downloads](https://github.com/medissl/jellink/releases).
 
 ## Official distribution
 
