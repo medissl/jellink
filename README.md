@@ -6,7 +6,7 @@
 
 A physics puzzle by **Medissl**. Drop glossy jellies into a glass jar, build a crowd, and choose when to pop it.
 
-[Play in your browser](https://jellink.vercel.app/play/) · [Download Android](https://jellink.vercel.app/#download) · [All releases](https://github.com/medissl/jellink-download/releases)
+[Play in your browser](https://jellink.vercel.app/play/) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.7.1 APK](https://github.com/medissl/jellink-download/releases/download/v0.7.1/Jellink-0.7.1.apk) · [All releases](https://github.com/medissl/jellink-download/releases)
 
 </div>
 
@@ -20,7 +20,11 @@ Tap to drop, or hold and drag to aim. Slide up into × to cancel. Match three of
 
 Soft physics, three jelly sizes, round/wide/tall shapes, Picnic and Minimal themes, original music and sounds. Solo works offline with local saves. Updates keep your existing progress.
 
-## A little company
+## Coming with v0.8.0 · currently being verified
+
+The current v0.7.1 download has offline play and 32 achievements. The features below arrive with v0.8.0.
+
+### A little company
 
 Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Play as a guest, or link an email to keep your online profile across devices. Add friends with their code, accept or reject requests, and compare server-verified Versus scores in your friend leaderboard. Solo remains separate.
 
