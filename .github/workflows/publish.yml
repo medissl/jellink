@@ -1,0 +1,40 @@
+name: Publish signed Jellink download
+on:
+  push:
+    branches: [release-inbox]
+permissions:
+  contents: write
+concurrency:
+  group: jellink-public-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'build-tools;36.0.0'
+      - name: Verify official signed APK
+        run: |
+          node -e "const m=require('./release-meta.json');if(!/^\d+\.\d+\.\d+$/.test(m.version)||!/^([0-9a-f]{40})$/.test(m.sourceCommit))throw Error('Invalid release metadata');console.log(m);"
+          version=$(node -p 'require("./release-meta.json").version')
+          apk="Jellink-$version.apk"
+          sha256sum -c "$apk.sha256"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$apk" > signature.txt
+          grep -q '73f6351ffdb96fcfd61015ad2f04cb5e4601353b7076494e0a2ebae6afbf7819' signature.txt
+          echo "APK=$apk" >> "$GITHUB_ENV"
+          echo "TAG=v$version" >> "$GITHUB_ENV"
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo 'Version already published; refusing to replace its APK.'
+            exit 1
+          fi
+          gh release create "$TAG" "$APK" "$APK.sha256" release-meta.json --target main --title "Jellink $TAG" --notes-file release-notes.md
+      - name: Clear temporary binary handoff branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/release-inbox"

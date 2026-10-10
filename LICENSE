@@ -1,0 +1,37 @@
+Jellink Proprietary Licence
+Copyright (c) 2026 Medissl (github.com/medissl). All rights reserved.
+
+1. Ownership
+The original Jellink source code, artwork, audio, documentation and branding
+in this repository are proprietary works of Medissl, except for materials
+identified as third-party works or subject to their own licence.
+
+2. Official game
+Permission is granted to download, install and play unmodified official
+Jellink releases, and to play the official browser version, for personal,
+non-commercial use. Sharing links to official releases is permitted. Sharing gameplay screenshots
+and recordings for reviews, commentary and streaming is also permitted;
+this does not permit distributing source code or standalone game assets.
+
+3. Source and assets
+No permission is granted to reuse, modify, distribute, sublicense, sell,
+rebrand or publish this repository's proprietary code or assets, including
+as a competing game or an unofficial app-store upload, without prior
+written permission from Medissl. Viewing or accessing the repository does
+not grant those rights. Rights required by GitHub's applicable Terms of
+Service, including viewing and forking through GitHub where those terms
+provide for it, are unaffected.
+
+4. Third-party materials
+Third-party dependencies and bundled materials remain governed by their
+respective licences and notices. This licence does not restrict rights
+those licences independently grant. See the bundled notices, including the
+Fredoka SIL Open Font License in licenses/OFL-Fredoka.txt.
+
+5. Disclaimer
+To the extent permitted by applicable law, the game and materials are
+provided "as is", without warranties of any kind. Medissl is not liable
+for damages arising from their use. Mandatory rights under applicable law
+are unaffected.
+
+For other permissions, contact Medissl through github.com/medissl.
