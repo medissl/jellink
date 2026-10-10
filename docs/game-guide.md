@@ -10,4 +10,4 @@ Keep the pile below the dotted line. Crossing it gives one rescue drop to make r
 
 Picnic and Minimal themes, sound volumes, a drop guide, reduced motion and optional gentle haptics are in options. Reset local data has a separate confirmation. Install updates over the existing Android app to retain your progress.
 
-Friends are optional. Share your friend code, accept a request, then create a room and give its code to your friend. Versus is a three-minute score race with separate jars; Co-op shares a jar and alternates drops. Solo always works offline.
+Friends are optional. Share your friend code, accept a request, then create a room and give its code to your friend. Tap a code to copy it. Your friend presses Ready; the host presses Start. Versus is a three-minute score race with separate jars; Co-op shares a jar and alternates drops. Solo always works offline.

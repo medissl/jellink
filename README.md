@@ -6,7 +6,7 @@
 
 A physics puzzle by **Medissl**. Drop glossy jellies into a glass jar, build a crowd, and choose when to pop it.
 
-[Play in your browser](https://jellink.vercel.app) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.8.3 APK](https://github.com/medissl/jellink/releases/download/v0.8.3/Jellink-0.8.3.apk) · [All releases](https://github.com/medissl/jellink/releases)
+[Play in your browser](https://jellink.vercel.app) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.9.0 APK](https://github.com/medissl/jellink/releases/download/v0.9.0/Jellink-0.9.0.apk) · [All releases](https://github.com/medissl/jellink/releases)
 
 </div>
 
@@ -22,11 +22,11 @@ Soft physics, three jelly sizes, round/wide/tall shapes, Picnic and Minimal them
 
 ## A little more to enjoy
 
-Current release: **0.8.3**, signed native Android. Your existing local progress is preserved.
+Current release: **0.9.0**, signed native Android. Your existing local progress is preserved.
 
 ### A little company
 
-Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Guest play needs no email. Your guest profile stays on this device. Add friends with their code, accept or reject requests, and compare solo personal bests in your friend leaderboard. Gold, silver and bronze mark the top three. Records sync after a run and when you open the board; solo still works offline. Versus results are calculated by the server separately.
+Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Guest play needs no email. Your guest profile stays on this device. Add friends with their code, accept or reject requests, and compare solo personal bests in your friend leaderboard. Gold, silver and bronze mark the top three. Records sync after a run and when you open the board; solo still works offline. Ready up in a lobby before either mode starts. Add a cropped portrait, short bio and three earned achievement badges to your profile; email/password accounts are optional. Tap any friend or room code to copy it.
 
 There are 38 achievements with unlock dates, optional gentle haptics, and a result card you can share after losing. No ads. No currency shop.
 
@@ -52,7 +52,7 @@ Jellink is an original game and a portfolio project: gameplay design, a custom p
 | Native Android | Java, Android Canvas, SoundPool / MediaPlayer; Gradle, Java 21, Android SDK 36 |
 | Physics and visuals | Custom 2D collision and pressure-based jelly deformation; shared gameplay rules in browser and Android |
 | Local progress | Browser local storage; Android SharedPreferences; no account needed for solo |
-| Optional online play | Supabase Auth, Postgres and an authenticated Edge Function using the game engine |
+| Optional online play | Supabase Auth, Postgres, authenticated Edge Functions and private Realtime Broadcast |
 | Website hosting | Vercel, connected to the private source repository |
 | Releases and testing | GitHub Actions, native unit tests and Android emulator checks; signed APKs with SHA-256 checksums |
 | Typography | Fredoka, licensed under SIL OFL |
@@ -61,7 +61,7 @@ Jellink is an original game and a portfolio project: gameplay design, a custom p
 
 Jelly bodies react to gravity, impacts, neighbouring weight and curved glass boundaries. Their rendered surfaces deform with contact pressure while the collision solver maintains a stable pile. Three sizes and three rounded shapes change how pieces settle. Matching crowds grow through ten Bloom milestones, and larger pops can trigger sequential chain reactions.
 
-Solo keeps its progress on the device. Online matches use server-verified moves and scores, with local prediction for immediate feedback. Versus uses the same seeded ordinary jelly sequence in both jars; Co-op uses one shared jar with alternating drops. Online matches restore the solo jar when you leave and do not overwrite local records.
+Solo keeps its progress on the device. Duel runs each jar locally without network requests blocking drops or overwriting it. Co-op simulates on the host and sends acknowledged commands and interpolated snapshots to the guest. Friend-match results use device-reported checkpoints with sequence and bounds checks; these are casual matches, not cheat-proof competitive rankings. Versus uses the same seeded ordinary jelly sequence in both jars; Co-op uses one shared jar with alternating drops. Online matches restore the solo jar when you leave and do not overwrite local records.
 
 The APK draws and plays the game natively. It does not package a browser or use a WebView. Its compact size comes from native drawing, compact artwork and bundled audio.
 
@@ -75,4 +75,4 @@ The APK draws and plays the game natively. It does not package a browser or use 
 
 This public repository contains screenshots, releases, checksums and release notes. The source repository is private. Download links stay public.
 
-Copyright © 2026 Medissl. All rights reserved. You may play official builds and share gameplay/screenshots. Republishing the game, source, artwork, audio or branding requires permission; see [LICENSE](LICENSE). Third-party rights remain with their owners; [Fredoka uses the SIL OFL](licenses/OFL-Fredoka.txt).
+Copyright © 2026 Medissl. All rights reserved. You may play official builds and share gameplay/screenshots. Republishing the game, source, artwork, audio or branding requires permission; see [LICENSE](LICENSE). Third-party rights remain with their owners; [Fredoka uses the SIL OFL](licenses/OFL-Fredoka.txt). Android transport includes [Java-WebSocket](licenses/MIT-Java-WebSocket.txt) and [SLF4J](licenses/MIT-SLF4J.txt), licensed under MIT.
