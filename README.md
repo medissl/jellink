@@ -6,7 +6,7 @@
 
 A physics puzzle by **Medissl**. Drop glossy jellies into a glass jar, build a crowd, and choose when to pop it.
 
-[Play in your browser](https://jellink.vercel.app/play/) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.7.1 APK](https://github.com/medissl/jellink-download/releases/download/v0.7.1/Jellink-0.7.1.apk) · [All releases](https://github.com/medissl/jellink-download/releases)
+[Play in your browser](https://jellink.vercel.app/play/) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.7.1 APK](https://github.com/medissl/jellink/releases/download/v0.7.1/Jellink-0.7.1.apk) · [All releases](https://github.com/medissl/jellink/releases)
 
 </div>
 
@@ -32,7 +32,7 @@ There are 38 achievements with unlock dates, optional gentle haptics, and a resu
 
 ## Install Android
 
-1. Download the APK from an [official release](https://github.com/medissl/jellink-download/releases).
+1. Download the APK from an [official release](https://github.com/medissl/jellink/releases).
 2. Allow installation from your browser when Android asks.
 3. Open Jellink. For updates, install the new APK over the existing app; do not uninstall first if you want to keep progress.
 
