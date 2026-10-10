@@ -6,13 +6,13 @@
 
 A physics puzzle by **Medissl**. Drop glossy jellies into a glass jar, build a crowd, and choose when to pop it.
 
-[Play in your browser](https://jellink.vercel.app/play/) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.8.0 APK](https://github.com/medissl/jellink/releases/download/v0.8.0/Jellink-0.8.0.apk) · [All releases](https://github.com/medissl/jellink/releases)
+[Play in your browser](https://jellink.vercel.app) · [Download Android](https://jellink.vercel.app/#download) · [Download v0.8.0 APK](https://github.com/medissl/jellink/releases/download/v0.8.0/Jellink-0.8.0.apk) · [All releases](https://github.com/medissl/jellink/releases)
 
 </div>
 
 | Menu | Gameplay | Jelly Fever |
 | :---: | :---: | :---: |
-| ![Menu](Menu.png) | ![Gameplay](Gameplay.png) | ![Jelly Fever](Fever.png) |
+| <img src="Menu.png" alt="Jellink menu" width="260"> | <img src="Gameplay.png" alt="Jellink gameplay" width="260"> | <img src="Fever.png" alt="Jelly Fever" width="260"> |
 
 ## Your little jar
 
@@ -26,7 +26,7 @@ Current release: **0.8.0**, signed native Android. Your existing local progress 
 
 ### A little company
 
-Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Guest play needs no email. Your guest profile stays on this device. Add friends with their code, accept or reject requests, and compare server-verified Versus scores in your friend leaderboard. Solo remains separate.
+Optional online play adds **Versus** (two jars, the same jelly sequence, a three-minute score race) and **Co-op** (one shared jar, alternating drops). Guest play needs no email. Your guest profile stays on this device. Add friends with their code, accept or reject requests, and compare solo personal bests in your friend leaderboard. Gold, silver and bronze mark the top three. Records sync after a run and when you open the board; solo still works offline. Versus results are calculated by the server separately.
 
 There are 38 achievements with unlock dates, optional gentle haptics, and a result card you can share after losing. No ads. No currency shop.
 
@@ -40,7 +40,7 @@ Each release includes a SHA-256 checksum. The app is native Android with native 
 
 ## Built by Medissl
 
-**[Visit the Jellink website](https://jellink.vercel.app)** · **[Play the browser game](https://jellink.vercel.app/play/)** · [More projects](https://github.com/medissl)
+**[Visit the Jellink website](https://jellink.vercel.app)** · **[Play the browser game](https://jellink.vercel.app)** · [More projects](https://github.com/medissl)
 
 Jellink is an original game and a portfolio project: gameplay design, a custom physics simulation, procedural jelly rendering, original audio, a native Android app, and its download website. The project grew through hands-on playtesting and iteration on controls, physics, difficulty and feedback.
 

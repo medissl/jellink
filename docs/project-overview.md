@@ -1,6 +1,6 @@
 # Jellink · project overview
 
-[Website](https://jellink.vercel.app) · [Browser game](https://jellink.vercel.app/play/) · [Android releases](https://github.com/medissl/jellink/releases)
+[Website](https://jellink.vercel.app) · [Browser game](https://jellink.vercel.app) · [Android releases](https://github.com/medissl/jellink/releases)
 
 ## Goal
 
@@ -16,7 +16,7 @@ The two clients follow the same rules and achievement catalogue. Browser saves a
 
 ## Optional multiplayer
 
-Supabase provides guest authentication, Postgres storage and an authenticated game referee. The server validates room membership, turns and moves and calculates competitive results. Database tables deny direct client writes. Room revision checks prevent simultaneous moves being applied twice. Versus uses a shared seed and compares score, then largest link; Co-op alternates accepted drops into one jar. Solo remains independent.
+Supabase provides guest authentication, Postgres storage and an authenticated game referee. The server validates room membership, turns and moves and calculates competitive results. Database tables deny direct client writes. Room revision checks prevent simultaneous moves being applied twice. Versus uses a shared seed and compares score, then largest link; Co-op alternates accepted drops into one jar. Solo remains independent. The friends leaderboard compares synced, device-reported solo personal bests. These are separate from server-calculated competitive match results. Opening the board refreshes its ranks; finishing a solo run syncs the record, and reconnecting catches up offline progress. Offline play remains available with a brief connection notice.
 
 Guest accounts require no email. Email recovery needs public mail delivery to be configured and verified; it is not required for friends or invite matches.
 
